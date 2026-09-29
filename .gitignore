@@ -1,0 +1,13 @@
+.env
+.env.*
+!.env.example
+*.txt
+!notes.txt
+*.pdf
+*.log
+# Automator output
+sgl_workspace/logs/
+sgl_workspace/reports/
+__pycache__
+*.py[cod]
+.venv/
