@@ -1,0 +1,4 @@
+# beginning with version one
+
+v1 — Signature-based file router (current)
+pathlib only. Sort files by extension/type into fixed destination folders. No content read, no judgment.
