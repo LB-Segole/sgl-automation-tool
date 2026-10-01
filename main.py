@@ -48,4 +48,68 @@ now for the code
 
 # method for storing sets in dictionary is different
 
-# if/ dict comprehension/ defaultdict(set)/ dict.setdefault()
+# if/ dict comprehension/ defaultdict(set)/ dict.setdefault() 
+
+# most efficient method is defaultdict(set) - okei hsit, still poses the same
+# problem as the lsit, we drop it and focus on writing each extension one by one
+
+extensions = {
+    # Text and Document Files -> Documents
+    '.txt': 'Documents',
+    '.doc': 'Documents',
+    '.docx': 'Documents',
+    '.pdf': 'Documents',
+    '.rtf': 'Documents',
+    '.odt': 'Documents',
+    '.csv': 'Documents',
+
+    # Image Files -> Pictures
+    '.jpg': 'Pictures',
+    '.jpeg': 'Pictures',
+    '.png': 'Pictures',
+    '.gif': 'Pictures',
+    '.bmp': 'Pictures',
+    '.svg': 'Pictures',
+    '.tiff': 'Pictures',
+    '.tif': 'Pictures',
+    '.psd': 'Pictures',
+
+    # Audio and Video Files -> Media
+    '.mp3': 'Media',
+    '.wav': 'Media',
+    '.wmv': 'Media',
+    '.mp4': 'Media',
+    '.avi': 'Media',
+    '.mov': 'Media',
+    '.flv': 'Media',
+
+    # Executable and System Files -> Programs
+    '.exe': 'Programs',
+    '.dll': 'Programs',
+    '.sys': 'Programs',
+    '.bat': 'Programs',
+    '.sh': 'Programs',
+    '.msi': 'Programs',
+    '.com': 'Programs',
+
+    # Programming and Web Files -> Code
+    '.html': 'Code',
+    '.htm': 'Code',
+    '.css': 'Code',
+    '.js': 'Code',
+    '.py': 'Code',
+    '.java': 'Code',
+    '.c': 'Code',
+    '.cpp': 'Code',
+    '.php': 'Code',
+
+    # Archive and Data Files -> Archives
+    '.zip': 'Archives',
+    '.rar': 'Archives',
+    '.7z': 'Archives',
+    '.tar': 'Archives',
+    '.db': 'Archives',
+    '.dbf': 'Archives',
+    '.xml': 'Archives',
+    '.json': 'Archives',
+}
