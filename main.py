@@ -150,5 +150,96 @@ move file there
 handle odd cases, file with two same names, file already exists, file with no extension, hidden dotfile etc
 '''
 
-p = Path('.')
+p = Path('.') # calls an unknown directory but i'm looking for downloads
 
+p = Path('/home/lesego-blessing-segole/Downloads')
+
+exist = p.exists() # checking if i did the right thing and if my path exists which is true, so good stuff
+# logic 1, done. picked a folder
+
+# print(f'{exist}')
+
+# for x in p.exists(): #boolean, not iterable
+#     results =  x
+# print(f'{results}')
+
+# for x in p: # poxipath, not iterable
+    # print(x)
+
+# logic 2, how do i check everything inside the downloads? looping
+# but how when i cant iterate a poxipath? let's try again
+
+# for dfiles in p:
+#     if p.suffix ...
+
+'''
+wait let me think about it:
+loop through the downloads path
+e.g. code without full understanding of syntax: pseudo code:
+for dfiles in p:
+    if p is folder
+    skip
+    elif p is file
+    read.suffix (read file extention) against extentions
+    return dfiles
+    
+then the asking the dictionary which folder it belongs to
+it looks like i'm gonna have to store the return of the suffix in a variable so we can do something like...
+for ext in suffix:
+    if ext == extentions
+    shuti.move('/Download.suffix', 'extentions')???
+    if shutil.move() === error
+    path.mkdir(parents = True, exist_ok = True)
+
+i'm still confused on the syntax and understanding but i get the gist of it
+'''
+
+# okei cool, so for the loop of the path, i have to use the right method:
+
+for dfiles in p.iterdir():
+    try:
+        if p.is_file() == True:
+            pass # temporary to close the if block
+        # else: # i don't know how to do the exception here
+        #     pass
+
+        '''
+        for item in download folder
+        first check if an item is a p.is_file()
+        ignore it if p.is_dir()
+        if item p.is_file == True
+        return its suffix
+        and check the suffix against the dictionary
+        then shutil.move(p.is_file, extension)
+        and then logging of what was moved to where
+
+        i think that's how the above should go
+        '''
+
+    except Exception:
+        pass # i don't fully understand this exception
+
+    print (f'{dfiles}') # perfect, lists every file in the download
+    # now to check if it's a file or folder
+    # what's the syntax to differentiate subdirs and files? subdir = p.is_dir  files = path.is_file
+    # what is the syntax to ignore?
+
+
+# oh yea, i meant to loop through the extentions
+
+# for x in extensions:
+#     # result = x
+#     print(f'{x}') # prints every extention
+#     #useless loop since i'm looking up the extention returned from the download folder, not
+#     # not looping thorugh the dict to check each value, there's nothing it's doing, i have to loop around the folder
+
+    
+
+# print(f'{result}') # printed only the last item on the list, why?
+# but that's not the point, i stored and looped through the extentions and sorted the result
+# this is logic 4, too early for it but let's keep it for now
+
+
+
+'''iterable meaning: anything i can loop over with a for loop like a list
+or a string, or a dictionary'''
