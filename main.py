@@ -1,5 +1,5 @@
 # sgl-ops-automator
-# Automates SGL's internal operations — file organisation, report generation, task scheduling. 
+# Automates SGL's internal operations: file organisation, report generation, task scheduling. 
 # You're building the company's infrastructure while learning automation.
 
 # what the hell are we doing here?
@@ -113,3 +113,42 @@ extensions = {
     '.xml': 'Archives',
     '.json': 'Archives',
 }
+
+'''
+list of extentions done called: extensions
+now what do i do?
+i need to check in the downloads folder
+do a search in it for the specific extention i'm looking for
+then put it in my desired folder
+does that mean i have to retype each extension?
+which one is more important? speed or easiness of code
+or how easily i can code? speed makes sense in the long run 
+and for editing in future
+okei cool, let's do the steps
+
+
+how the hell do i check? 
+okei what import allows me to go through my file path on the computer?
+PATH? I believe, nah it's os or is os what allows path to work?
+looking at the handbook it seems so
+under Path is pathlib, which a modern path handling
+i actually don't understand shit here wow
+there's too much happening, unix, windows, pureposixpath, pureqindospath
+i actually don't understand how file handling works on the basic level
+never used os, so that's the gap
+'''
+
+'''
+Logic:
+Pick folder
+Check everything inside it: looping
+for each item in download, decide if it's a folder or file (leave folders alone)
+for each file read it's extention (.suffix)
+ask my dictionary 'extensions' which folder does the suffix belong to
+ensure the destination folder exists, but have logic if file destination does not exist
+move file there
+handle odd cases, file with two same names, file already exists, file with no extension, hidden dotfile etc
+'''
+
+p = Path('.')
+
