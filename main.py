@@ -197,9 +197,24 @@ i'm still confused on the syntax and understanding but i get the gist of it
 # okei cool, so for the loop of the path, i have to use the right method:
 
 for dfiles in p.iterdir():
-    try:
-        if p.is_file() == True:
-            pass # temporary to close the if block
+        # if p.is_file() == True: # mistake, i'm looping through function not results
+        # if dfiles.is_file() == False: # discouraged by the PEP 18 guide options: if variable: for True and if not variable: for false
+        # if not dfiles.is_file: # here i'm saying if it's a folder,but i want a file
+        if dfiles.is_file():
+            suffix = dfiles.suffix # why is it not returning anything?
+            print(f'{suffix}')
+            '''
+            Get the suffix
+            Look up the destination
+            Create the destination folder if needed
+            Move the file
+            '''
+            # continue # here i skipped it
+
+        # print(f'{suffix}')
+            
+
+            # pass # temporary to close the if block
         # else: # i don't know how to do the exception here
         #     pass
 
@@ -216,10 +231,11 @@ for dfiles in p.iterdir():
         i think that's how the above should go
         '''
 
-    except Exception:
-        pass # i don't fully understand this exception
+    # except Exception:
+    #     pass # i don't fully understand this exception
+    # do error handling manually, the above ignores errors
 
-    print (f'{dfiles}') # perfect, lists every file in the download
+    # print (f'{dfiles}') # perfect, lists every file in the download
     # now to check if it's a file or folder
     # what's the syntax to differentiate subdirs and files? subdir = p.is_dir  files = path.is_file
     # what is the syntax to ignore?
